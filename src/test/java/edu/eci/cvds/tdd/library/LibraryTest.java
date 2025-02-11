@@ -13,9 +13,13 @@ public class LibraryTest {
         library = new Library();
     }
     @Test
-    public void testAddBookRegisterNewBook(){
+    public void testAddBookRegisterNewBookWithoutProblem(){
         Book book = new Book("nicolicas", "nianduro", "miguelicas");
         assertTrue(library.addBook(book));
     }
-    @Te
+    @Test
+    public void testAddBookNotRegisterBookBecauseBookIsNull(){
+        assertFalse(library.addBook(null));
+    }
+
 }

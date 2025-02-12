@@ -216,4 +216,23 @@ Para esta parte realizaremos las pruebas unitarias para la clase library, por lo
 - ![alt text](images/LibraryTest.png)
 Vamos a dividir esta parte en features, cada uno de los metodos tendra su propio feature, debido a que somos dos, uno tomara dos features y el otro una,
 cabe aclarar que la persona que hizo dos features, una de las dos fue hecha con la metodologia agil, programacion a pares.
-
+### Test
+feature/addBook
+- ![alt text](images/addbook.png)
+feature/loanABook
+- ![alt text](images/loanabook.png)
+feature/returnloan
+- ![alt text](images/returnloan.png)
+### Code
+feature/addBook
+- ![alt text](images/addbookcode.png)
+feature/loanABook
+- ![alt text](images/loanabookcode.png)
+feature/returnloan
+- ![alt text](images/returnloancode.png)
+#### Todas las pruebas pasan:
+- ![alt text](images/test.png)
+## JACOCO
+El resultado de la JACOCO.
+- ![alt text](images/jacoco.png)
+## 

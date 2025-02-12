@@ -235,4 +235,8 @@ feature/returnloan
 ## JACOCO
 El resultado de la JACOCO.
 - ![alt text](images/jacoco.png)
-## 
+## SONARQUBE
+- ![alt text](images/sonar1.png)
+- ![alt text](images/sonar2.png)
+- ![alt text](images/sonar3.png)
+- ![alt text](images/sonar4.png)

@@ -16,6 +16,9 @@
     <maven.compiler.release>17</maven.compiler.release>
     <maven.compiler.target>1.17</maven.compiler.target>
     <maven.compiler.source>1.17</maven.compiler.source>
+    <sonar.projectKey>mi-proyecto</sonar.projectKey>
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <sonar.login>MI_TOKEN_GENERADO</sonar.login>
   </properties>
 
   <dependencies>
@@ -29,6 +32,11 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.1.2184</version>
+      </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>

@@ -30,7 +30,8 @@ public class LibraryTest {
         library.addBook(book);
         User user = new User();
         user.setId("nicolicas");
-        Loan loan = library.loanABook("nicolicas", "nianduro");
+        library.addUser(user);
+        Loan loan = library.loanABook("nicolicas", "miguelicas");
         assertNotNull(loan);
     }
     @Test
@@ -93,6 +94,9 @@ public class LibraryTest {
     public void testReturnLoanReturnDateIsGood(){
         Book book = new Book("nicolicas", "nianduro", "nianduro");
         library.addBook(book);
+        User user = new User();
+        user.setId("nicolicas");
+        library.addUser(user);
         Loan loan = library.loanABook("nicolicas", "nianduro");
         assertEquals(library.returnLoan(loan).getReturnDate(), LocalDateTime.now());
     }

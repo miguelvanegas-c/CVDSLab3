@@ -12,6 +12,7 @@ import java.util.Map;
 import java.time.LocalDateTime;
 
 import static edu.eci.cvds.tdd.library.loan.LoanStatus.ACTIVE;
+import static edu.eci.cvds.tdd.library.loan.LoanStatus.RETURNED;
 
 /**
  * Library responsible for manage the loans and the users.
@@ -60,7 +61,7 @@ public class Library {
      * @return The new created loan.
      */
     public Loan loanABook(String userId, String isbn) {
-        if (userId != null && isbn != null && books.containsKey(isbn) && users.contains(userId)) {
+        if (userId != null && isbn != null && bookExists(isbn) && userExists(userId)) {
             for (Loan loan : loans) {
                 if (loan.getBook().getIsbn().equals(isbn) && loan.getUser().getId().equals(userId)) {
                     return null;
@@ -69,9 +70,26 @@ public class Library {
             Loan loan = new Loan();
             Loan finalLoan = setLoan(loan,userId,isbn);
             loans.add(finalLoan);
+            return finalLoan;
         }
         //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
         return null;
+    }
+    private boolean bookExists(String isbn) {
+        for (Book book : books.keySet()) {
+            if (book.getIsbn().equals(isbn)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean userExists(String userId) {
+        for (User user : users) {
+            if (user.getId().equals(userId)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private Loan setLoan(Loan loan, String userId, String isbn) {
@@ -104,6 +122,8 @@ public class Library {
     public Loan returnLoan(Loan loan) {
         if (loan != null && loans.contains(loan)) {
             loans.remove(loan);
+            loan.setReturnDate(LocalDateTime.now());
+            loan.setStatus(RETURNED);
             return loan;
         }
         return null;

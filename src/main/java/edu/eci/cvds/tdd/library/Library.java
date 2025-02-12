@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.time.LocalDateTime;
 
 /**
  * Library responsible for manage the loans and the users.
@@ -70,7 +71,10 @@ public class Library {
      * @return the loan with the RETURNED status.
      */
     public Loan returnLoan(Loan loan) {
-        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
+        if (loan != null && loans.contains(loan)) {
+            loans.remove(loan);
+            return loan;
+        }
         return null;
     }
 

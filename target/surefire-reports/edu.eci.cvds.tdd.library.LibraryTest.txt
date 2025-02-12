@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: edu.eci.cvds.tdd.library.LibraryTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in edu.eci.cvds.tdd.library.LibraryTest
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! -- in edu.eci.cvds.tdd.library.LibraryTest
+edu.eci.cvds.tdd.library.LibraryTest.testReturnLoanReturnDateIsGood -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "edu.eci.cvds.tdd.library.loan.Loan.getReturnDate()" because the return value of "edu.eci.cvds.tdd.library.Library.returnLoan(edu.eci.cvds.tdd.library.loan.Loan)" is null
+	at edu.eci.cvds.tdd.library.LibraryTest.testReturnLoanReturnDateIsGood(LibraryTest.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

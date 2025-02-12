@@ -4,10 +4,13 @@ import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.loan.Loan;
 import edu.eci.cvds.tdd.library.user.User;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static edu.eci.cvds.tdd.library.loan.LoanStatus.ACTIVE;
 
 /**
  * Library responsible for manage the loans and the users.
@@ -56,8 +59,36 @@ public class Library {
      * @return The new created loan.
      */
     public Loan loanABook(String userId, String isbn) {
+        if (userId != null && isbn != null && books.containsKey(isbn) && users.contains(userId)) {
+            for (Loan loan : loans) {
+                if (loan.getBook().getIsbn().equals(isbn) && loan.getUser().getId().equals(userId)) {
+                    return null;
+                }
+            }
+            Loan loan = new Loan();
+            Loan finalLoan = setLoan(loan,userId,isbn);
+            loans.add(finalLoan);
+        }
         //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
         return null;
+    }
+
+    private Loan setLoan(Loan loan, String userId, String isbn) {
+        for (Book book : books.keySet()) {
+            if(book.getIsbn().equals(isbn)) {
+                books.put(book, books.get(book) - 1);
+                loan.setBook(book);
+            }
+        }
+        for (User u : users) {
+            if (u.getId().equals(userId)) {
+                loan.setUser(u);
+            }
+        }
+        loan.setStatus(ACTIVE);
+        LocalDateTime currentDate = LocalDateTime.now();
+        loan.setLoanDate(currentDate);
+        return loan;
     }
 
     /**

@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e18fcc37-e8f4-450a-a435-34a37108f24f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/eci/cvds/tdd/library/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/eci/cvds/tdd/library/LibraryTest.java" afterDir="false" />
     </list>
-=======
     <list default="true" id="e18fcc37-e8f4-450a-a435-34a37108f24f" name="Changes" comment="" />
->>>>>>> 0270879d1775e52d0d263cfa8477c66283b7a71d
+
+    <list default="true" id="e18fcc37-e8f4-450a-a435-34a37108f24f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/cvds/tdd/library/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/eci/cvds/tdd/library/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/eci/cvds/tdd/library/LibraryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/cvds/tdd/library/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/cvds/tdd/library/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.eci.cvds.tdd.library.LibraryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.eci.cvds.tdd.library.LibraryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.eci.cvds.tdd.library.LibraryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.eci.cvds.tdd.library.LibraryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/eci/cvds/tdd/library/LibraryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/eci/cvds/tdd/library/LibraryTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +44,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.LibraryTest.testAddBookRegisterNewBook.executor": "Run",
@@ -49,11 +56,17 @@
     "last_opened_file_path": "C:/Users/nicol/Desktop/UNIVERSIDAD/Sexto semestre/CVDS/lab03/CVDSLab3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
+
+    "git-widget-placeholder": "feature/returnloan",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/miguel.vanegas-c.LABINFO/Documents/lab3/Library",
+    "node.js.detected.package.eslint": "true",
+
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-=======
+
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;JUnit.LibraryTest.testAddBookRegisterNewBook.executor&quot;: &quot;Run&quot;,
@@ -68,9 +81,9 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
->>>>>>> 0270879d1775e52d0d263cfa8477c66283b7a71d
+
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="LibraryTest.testAddBookRegisterNewBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Library" />
@@ -110,12 +123,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738759903988</updated>
-<<<<<<< HEAD
       <workItem from="1739311255099" duration="1991000" />
       <workItem from="1739314297861" duration="183000" />
-=======
       <workItem from="1739310640800" duration="2886000" />
->>>>>>> 0270879d1775e52d0d263cfa8477c66283b7a71d
     </task>
     <servers />
   </component>

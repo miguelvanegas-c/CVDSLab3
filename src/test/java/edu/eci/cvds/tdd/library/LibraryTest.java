@@ -4,8 +4,9 @@ import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.user.User;
 import edu.eci.cvds.tdd.library.loan.Loan;
 import org.junit.jupiter.api.*;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.LocalDateTime;
 
 public class LibraryTest {
     private Library library;
@@ -32,7 +33,6 @@ public class LibraryTest {
         Loan loan = library.loanABook("nicolicas", "nianduro");
         assertNotNull(loan);
     }
-
     @Test
     public void testLoanABookNotCreateNewLoanBecauseBookNotAvaible(){
         User user = new User();
@@ -40,7 +40,6 @@ public class LibraryTest {
         Loan loan = library.loanABook("nicolicas", "nianduro");
         assertNull(loan);
     }
-
     @Test
     public void testLoanABookNotCreateNewLoanBecauseBookIsNull(){
         Loan loan = library.loanABook("nicolicas", null);
@@ -70,5 +69,31 @@ public class LibraryTest {
         Loan loan = library.loanABook("nicolicas", "nianduro");
         Loan loan2 = library.loanABook("nicolicas", "nianduro");
         assertNull(loan2);
+    }
+    @Test
+    public void testReturnLoanReturnLoanWithoutProblem(){
+        Book book = new Book("nicolicas", "nianduro", "nianduro");
+        library.addBook(book);
+        Loan loan = library.loanABook("nicolicas", "nianduro");
+        assertEquals(loan,library.returnLoan(loan));
+    }
+
+    @Test
+    public void testReturnLoanNotReturnLoanBecauseLoanIsNull(){
+        assertNull(library.returnLoan(null));
+    }
+
+    @Test
+    public void testReturnLoanNotReturnLoanBecauseLoanNotExist(){
+        Loan loan = new Loan();
+        assertNull(library.returnLoan(loan));
+    }
+
+    @Test
+    public void testReturnLoanReturnDateIsGood(){
+        Book book = new Book("nicolicas", "nianduro", "nianduro");
+        library.addBook(book);
+        Loan loan = library.loanABook("nicolicas", "nianduro");
+        assertEquals(library.returnLoan(loan).getReturnDate(), LocalDateTime.now());
     }
 }
